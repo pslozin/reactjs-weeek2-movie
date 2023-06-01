@@ -1,0 +1,15 @@
+.movieCard
+ {
+   
+    display: inline-block;
+    justify-content: center;
+    background: #ddd;
+    line-height: 50px;
+    height: 450px;
+    width: 300px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid;
+
+   
+  }

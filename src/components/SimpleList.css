@@ -1,0 +1,14 @@
+.input-form{
+    background-color: gray;
+}
+
+.input-form.invalid input{
+    background-color: red;
+    border: 2px red;
+
+
+}
+
+.input-form.invalid label{
+    color: red;
+}
