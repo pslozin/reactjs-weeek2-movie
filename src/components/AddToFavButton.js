@@ -18,11 +18,23 @@ export default function AddToFavButton(props) {
             if(addToFav === "Remove from Fav`s")
             {
             setAddtoFav("Add to Fav")
-            //props.addTo("")
+            console.log("Deleting", props.movieTitle.id)
+            console.log("Deletin From Temp DB", props.favDb)
+            console.log("index is --", props.favDb.indexOf(502356))
+
+            let indexOfFavs = props.favDb.findIndex(function (favind) {
+                return favind.id === props.movieTitle.id;
+            });
+
+            console.log("index is :",indexOfFavs)
+          
+            props.addTo(props.favDb.splice(indexOfFavs,1))
+            
             }
             else
             {
-            props.addTo([...props.favDb, props.movieTitle])
+            let movieArr = [...props.favDb, props.movieTitle]
+            props.addTo(movieArr)
             setAddtoFav("Remove from Fav`s")
 
             }
